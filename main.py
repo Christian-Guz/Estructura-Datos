@@ -1,11 +1,7 @@
-from estructuras.lineales.lista_enlazada_simple import Lunkedlist
+from menu.menu import Menu
 
 def main():
-    lista = Lunkedlist()
-    lista.insert_at_beginning(10)
-    lista.insert_at_beginning(20)
-    lista.insert_at_beginning(30)
-    lista.print_linked_list()
-
+    menu = Menu()
+    menu.ejecutar()
 if __name__ == "__main__":
     main()

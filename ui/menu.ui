@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menu_principal</class>
+ <widget class="QMainWindow" name="menu_principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>317</width>
+    <height>247</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* =========================
+   VENTANA PRINCIPAL
+   ========================= */
+QMainWindow {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: &quot;Segoe UI&quot;;
+}
+
+/* Área central */
+QWidget {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* =========================
+   BARRA DE MENÚ
+   ========================= */
+QMenuBar {
+    background-color: #1e1e1e;
+    color: white;
+    border-bottom: 1px solid #303030;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 6px 12px;
+}
+
+QMenuBar::item:selected {
+    background-color: #2d2d2d;
+    border-radius: 4px;
+}
+
+/* =========================
+   MENÚS DESPLEGABLES
+   ========================= */
+QMenu {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #404040;
+}
+
+QMenu::item {
+    padding: 8px 25px;
+}
+
+QMenu::item:selected {
+    background-color: #353535;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #505050;
+    margin: 5px 10px;
+}
+
+/* =========================
+   BARRA DE ESTADO
+   ========================= */
+QStatusBar {
+    background-color: #1e1e1e;
+    color: #d0d0d0;
+    border-top: 1px solid #303030;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>317</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEstrucutras">
+    <property name="title">
+     <string>Estrucutras</string>
+    </property>
+    <widget class="QMenu" name="menuLineales">
+     <property name="title">
+      <string>Lineales</string>
+     </property>
+     <addaction name="actionListas_Enlazadas"/>
+    </widget>
+    <addaction name="menuLineales"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuEstrucutras"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionListas_Enlazadas">
+   <property name="text">
+    <string>Listas Enlazadas</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
