@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>689</width>
+    <height>486</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* =========================
+   VENTANA PRINCIPAL
+   ========================= */
+QDialog {
+    background-color: #1e1e1e;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    font-family: &quot;Segoe UI&quot;;
+    color: #f0f0f0;
+}
+
+/* =========================
+   ETIQUETAS
+   ========================= */
+QLabel {
+    color: #e0e0e0;
+    font-weight: 500;
+    background: transparent;
+}
+
+/* =========================
+   CAJAS DE TEXTO
+   ========================= */
+QLineEdit {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 2px solid #404040;
+    border-radius: 8px;
+    padding: 8px;
+    selection-background-color: #3d8bfd;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3d8bfd;
+    background-color: #333333;
+}
+
+QLineEdit:disabled {
+    background-color: #252525;
+    color: #808080;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+QPushButton {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #5a5a5a;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #333333;
+}
+
+QPushButton:pressed {
+    background-color: #252525;
+}
+/* =========================
+   TOOLTIP
+   ========================= */
+QToolTip {
+    background-color: #2b2b2b;
+    color: white;
+    border: 1px solid #3d8bfd;
+    padding: 5px;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>90</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>62</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Expresión infija:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_infja">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>80</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_posfija">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>631</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>62</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_conver">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>160</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Convertir</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

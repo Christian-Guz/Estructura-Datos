@@ -40,3 +40,17 @@ class Stack:
         
     def is_empty(self):
         return self.top is None
+    
+    def peek(self):
+        if self.top is None:
+            return None
+        return self.top.data
+
+
+    def pop_data(self):
+        if self.top is None:
+            return None
+
+        temp = self.top.data
+        self.top = self.top.next
+        return temp
