@@ -126,7 +126,7 @@ QToolTip {
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>310</y>
+     <y>270</y>
      <width>631</width>
      <height>91</height>
     </rect>
@@ -148,7 +148,7 @@ QToolTip {
   <widget class="QPushButton" name="btn_conver">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>180</x>
      <y>160</y>
      <width>141</width>
      <height>51</height>
@@ -163,6 +163,49 @@ QToolTip {
    </property>
    <property name="text">
     <string>Convertir</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_evaluar">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>160</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Evaluar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_evaluacion">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>330</y>
+     <width>631</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>62</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

@@ -50,3 +50,23 @@ class ConversorPosfija:
             salida += self.pila.pop_data()
 
         return salida
+    
+    def evaluar(self, expresion):
+        self.pila = Stack()
+        for caracter in expresion:
+            if caracter.isdigit():
+                self.pila.push(int(caracter))
+            else:
+                operando2 = self.pila.pop_data()
+                operando1 = self.pila.pop_data()
+                if caracter == "+":
+                    self.pila.push(operando1 + operando2)
+                elif caracter == "-":
+                    self.pila.push(operando1 - operando2)
+                elif caracter == "*":
+                    self.pila.push(operando1 * operando2)
+                elif caracter == "/":
+                    self.pila.push(operando1 / operando2)
+                elif caracter == "$":
+                    self.pila.push(operando1 ** operando2)
+        return self.pila.pop_data()
