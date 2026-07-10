@@ -3,6 +3,7 @@ from PyQt5 import uic
 from load.load_listas_enlazadas import DialogListasEnlazadas
 from load.load_pila_stack import DialogStock
 from load.load_aplicacion import DialogAplicacion
+from load.load_Queue import DialogQueue
 
 class LoadMenu(QMainWindow):
     def __init__(self):
@@ -11,7 +12,8 @@ class LoadMenu(QMainWindow):
         
         self.actionListas_Enlazadas.triggered.connect(self.load_listas_enlazadas)
         self.actionPila_o_Stack.triggered.connect(self.loadPila_Stack)
-        self.actionAplicacion.triggered.connect(self.loadAplicacion)
+        self.actionInfijaaPosfija.triggered.connect(self.loadAplicacion)
+        self.actionCola_o_Queue.triggered.connect(self.loadQueue)
         self.actionSalir.triggered.connect(self.close)
         
     def load_listas_enlazadas(self):
@@ -25,6 +27,10 @@ class LoadMenu(QMainWindow):
     def loadAplicacion(self):
         aplicacion = DialogAplicacion()
         aplicacion.exec_()
+    
+    def loadQueue(self):
+        queue = DialogQueue()
+        queue.exec_()
     
     def close(self):
         return super().close()

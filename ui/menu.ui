@@ -105,13 +105,20 @@ QStatusBar {
      </property>
      <addaction name="actionListas_Enlazadas"/>
      <addaction name="actionPila_o_Stack"/>
-     <addaction name="actionAplicacion"/>
+     <addaction name="actionCola_o_Queue"/>
     </widget>
     <addaction name="menuLineales"/>
     <addaction name="separator"/>
     <addaction name="actionSalir"/>
    </widget>
+   <widget class="QMenu" name="menuAplicacion">
+    <property name="title">
+     <string>Aplicacion</string>
+    </property>
+    <addaction name="actionInfijaaPosfija"/>
+   </widget>
    <addaction name="menuEstrucutras"/>
+   <addaction name="menuAplicacion"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionSalir">
@@ -132,6 +139,16 @@ QStatusBar {
   <action name="actionAplicacion">
    <property name="text">
     <string>Aplicacion</string>
+   </property>
+  </action>
+  <action name="actionInfijaaPosfija">
+   <property name="text">
+    <string>Expresión Infija a Posfija</string>
+   </property>
+  </action>
+  <action name="actionCola_o_Queue">
+   <property name="text">
+    <string>Cola o Queue</string>
    </property>
   </action>
  </widget>
