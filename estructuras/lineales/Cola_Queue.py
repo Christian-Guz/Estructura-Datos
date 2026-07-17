@@ -56,3 +56,12 @@ class Queue(object):
             return True #Imprime True
         else:
             return False #Imprime None
+        
+    def listaQueue(self): 
+        temp = self.head 
+        x = [] 
+        while temp != None: 
+            if temp.next is None: 
+                x.append(temp.data)
+                temp = temp.next 
+        return x 
