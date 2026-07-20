@@ -5,6 +5,7 @@ from load.load_pila_stack import DialogStock
 from load.load_aplicacion import DialogAplicacion
 from load.load_Queue import DialogQueue
 from load.load_Banco import DialogBanco
+from load.load_Impresion import DialogImpresion
 
 class LoadMenu(QMainWindow):
     def __init__(self):
@@ -16,6 +17,7 @@ class LoadMenu(QMainWindow):
         self.actionInfijaaPosfija.triggered.connect(self.loadAplicacion)
         self.actionCola_o_Queue.triggered.connect(self.loadQueue)
         self.actionBanco.triggered.connect(self.loadBanco)
+        self.actionImpresion.triggered.connect(self.loadImpresion)
         self.actionSalir.triggered.connect(self.close)
         
     def load_listas_enlazadas(self):
@@ -37,6 +39,10 @@ class LoadMenu(QMainWindow):
     def loadBanco(self):
         banco = DialogBanco()
         banco.exec_()
+    
+    def loadImpresion(self):
+        impresion = DialogImpresion()
+        impresion.exec_()
     
     def close(self):
         return super().close()

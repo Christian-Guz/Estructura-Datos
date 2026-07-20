@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogImpresion</class>
+ <widget class="QDialog" name="DialogImpresion">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>820</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cola de Impresión</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ========================= VENTANA PRINCIPAL ========================= */ QDialog { background-color: #1e1e1e; border: 1px solid #303030; border-radius: 12px; font-family: &quot;Segoe UI&quot;; color: #f0f0f0; } /* ========================= ETIQUETAS ========================= */ QLabel { color: #e0e0e0; font-weight: 500; background: transparent; } /* ========================= CAJAS DE TEXTO ========================= */ QLineEdit { background-color: #2b2b2b; color: #ffffff; border: 2px solid #404040; border-radius: 8px; padding: 8px; selection-background-color: #3d8bfd; } QLineEdit:focus { border: 2px solid #3d8bfd; background-color: #333333; } QLineEdit:disabled { background-color: #252525; color: #808080; } /* ========================= BOTONES ========================= */ QPushButton { background-color: transparent; color: white; border: 2px solid #5a5a5a; border-radius: 8px; padding: 8px 14px; font-weight: bold; } QPushButton:hover { background-color: #333333; } QPushButton:pressed { background-color: #252525; } /* ========================= TOOLTIP ========================= */ QToolTip { background-color: #2b2b2b; color: white; border: 1px solid #3d8bfd; padding: 5px; }/* ========================= VENTANA PRINCIPAL ========================= */ QDialog { background-color: #1e1e1e; border: 1px solid #303030; border-radius: 12px; font-family: &quot;Segoe UI&quot;; color: #f0f0f0; } /* ========================= ETIQUETAS ========================= */ QLabel { color: #e0e0e0; font-weight: 500; background: transparent; } /* ========================= CAJAS DE TEXTO ========================= */ QLineEdit { background-color: #2b2b2b; color: #ffffff; border: 2px solid #404040; border-radius: 8px; padding: 8px; selection-background-color: #3d8bfd; } QLineEdit:focus { border: 2px solid #3d8bfd; background-color: #333333; } QLineEdit:disabled { background-color: #252525; color: #808080; } /* ========================= BOTONES ========================= */ QPushButton { background-color: transparent; color: white; border: 2px solid #5a5a5a; border-radius: 8px; padding: 8px 14px; font-weight: bold; } QPushButton:hover { background-color: #333333; } QPushButton:pressed { background-color: #252525; } /* ========================= TOOLTIP ========================= */ QToolTip { background-color: #2b2b2b; color: white; border: 1px solid #3d8bfd; padding: 5px; } QTableWidget{ background-color: rgb(45,45,45); color: white; border: 1px solid rgb(80,80,80); gridline-color: rgb(80,80,80); selection-background-color: rgb(0,120,215); selection-color: white; } QHeaderView::section{ background-color: rgb(60,60,60); color: white; border: 1px solid rgb(80,80,80); padding: 4px; font-weight: bold; } QTableCornerButton::section{ background-color: rgb(60,60,60); border: 1px solid rgb(80,80,80); } QSpinBox{ background-color: rgb(45,45,45); color:white; } QSpinBox QLineEdit{ background-color: rgb(45,45,45); color:white; }</string>
+  </property>
+  <widget class="QLabel" name="labelUsuario">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>60</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>62</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Usuario:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_usuario">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>10</y>
+     <width>180</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDocumento">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>10</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>62</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Documento:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_documento">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>10</y>
+     <width>220</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPaginas">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>20</y>
+     <width>60</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Páginas:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spn_paginas">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>20</y>
+     <width>70</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <number>10000</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_agregar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>180</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar a la cola</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_imprimir">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>60</y>
+     <width>180</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imprimir siguiente</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_frente">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>60</y>
+     <width>180</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Consultar frente</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbl_trabajos">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>780</width>
+     <height>320</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Consecutivo</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Usuario</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Documento</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Páginas</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="lbl_frente">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>450</y>
+     <width>780</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Frente: Sin trabajos</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_total">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>480</y>
+     <width>250</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Total pendientes: 0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_mensaje">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>520</y>
+     <width>780</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>Mensajes...</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
