@@ -6,6 +6,7 @@ from load.load_aplicacion import DialogAplicacion
 from load.load_Queue import DialogQueue
 from load.load_Banco import DialogBanco
 from load.load_Impresion import DialogImpresion
+from load.load_arbolExp import DialogArbolExpresiones
 
 class LoadMenu(QMainWindow):
     def __init__(self):
@@ -18,6 +19,7 @@ class LoadMenu(QMainWindow):
         self.actionCola_o_Queue.triggered.connect(self.loadQueue)
         self.actionBanco.triggered.connect(self.loadBanco)
         self.actionImpresion.triggered.connect(self.loadImpresion)
+        self.action_arbol_de_Expresiones.triggered.connect(self.loadArbolExpresiones)
         self.actionSalir.triggered.connect(self.close)
         
     def load_listas_enlazadas(self):
@@ -43,6 +45,10 @@ class LoadMenu(QMainWindow):
     def loadImpresion(self):
         impresion = DialogImpresion()
         impresion.exec_()
+    
+    def loadArbolExpresiones(self):
+        arbolExpresiones = DialogArbolExpresiones()
+        arbolExpresiones.exec_()
     
     def close(self):
         return super().close()

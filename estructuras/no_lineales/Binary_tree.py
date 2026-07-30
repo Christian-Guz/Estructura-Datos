@@ -1,3 +1,5 @@
+from binarytree import Node as BTNode
+
 class NodeTree:
     def __init__(self, value):
         self.value = value
@@ -36,14 +38,15 @@ class BinaryTree(object):
         return self._buscar(node.right, value)
     
     def preorden(self):
-        self._preorden(self.root)
-        print()
+        return self._preorden(self.root)
         
     def _preorden(self, node):
-        if node is not None:
-            print(node.value, end=" ")
-            self._preorden(node.left)
-            self._preorden(node.right)
+        if node is  None:
+            return ""
+        texto = str(node.value) + " "
+        texto += self._preorden(node.left)
+        texto += self._preorden(node.right)
+        return texto
     
     def inorden(self):
         self._inorden(self.root)
@@ -56,14 +59,16 @@ class BinaryTree(object):
             self._inorden(node.right)
             
     def posorden(self):
-        self._posorden(self.root)
-        print()
+        return self._posorden(self.root).strip()
         
     def _posorden(self, node):
-        if node is not None:
-            self._posorden(node.left)
-            self._posorden(node.right)
-            print(node.value, end=" ")
+        if node is None:
+            return ""
+        texto = ""
+        texto += self._posorden(node.left)
+        texto += self._posorden(node.right)
+        texto += str(node.value) + " "
+        return texto
     
     def contarNodos(self):
         return self._contarNodos(self.root)
@@ -72,3 +77,29 @@ class BinaryTree(object):
         if node is None:
             return 0
         return (1 + self._contarNodos(node.left) + self._contarNodos(node.right))
+
+    def inorden_expresion(self):
+        return self.__inorden_expresion(self.root)
+
+    def __inorden_expresion(self, node):
+        if node is None:
+            return ""
+        if node.left is None and node.right is None:
+            return str(node.value)
+        izquierda = self.__inorden_expresion(node.left)
+        derecha = self.__inorden_expresion(node.right)
+        return "(" + izquierda + " " + str(node.value) + " " + derecha + ")"
+    
+    def convertir_binarytree(self, nodo):
+        if nodo is None:
+            return None
+        nuevo = BTNode(nodo.value)
+        nuevo.left = self.convertir_binarytree(nodo.left)
+        nuevo.right = self.convertir_binarytree(nodo.right)
+        return nuevo
+    
+    def mostrar_arbol(self):
+        if self.root is None:
+            return "El árbol está vacío."
+        raiz = self.convertir_binarytree(self.root)
+        return str(raiz)
