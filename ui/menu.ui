@@ -119,6 +119,7 @@ QStatusBar {
     <addaction name="actionBanco"/>
     <addaction name="actionImpresion"/>
     <addaction name="action_arbol_de_Expresiones"/>
+    <addaction name="actionGrafo"/>
    </widget>
    <addaction name="menuEstrucutras"/>
    <addaction name="menuAplicacion"/>
@@ -167,6 +168,11 @@ QStatusBar {
   <action name="action_arbol_de_Expresiones">
    <property name="text">
     <string>Árbol de Expresiones</string>
+   </property>
+  </action>
+  <action name="actionGrafo">
+   <property name="text">
+    <string>Grafo</string>
    </property>
   </action>
  </widget>
